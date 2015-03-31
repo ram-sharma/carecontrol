@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-pie-chart fa-fw"></i> Current Patient Population Overview
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+      <div class="flot-chart">
+          <div class="flot-chart-content" id="flot-patient-pop"></div>
+      </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-bar-chart-o fa-fw"></i> Patient Population Over Time
+        <div class="pull-right">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                    Time Scale
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right" role="menu">
+                    <li><a href="#">30 Days</a>
+                    </li>
+                    <li><a href="#">Month to Date</a>
+                    </li>
+                    <li><a href="#">Last 4 Months</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+        <div class="row">
+          <div id="morris-pop-chart"></div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.panel-body -->
+</div>

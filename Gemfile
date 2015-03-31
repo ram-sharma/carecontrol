@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'flot-rails', :git => "https://github.com/Kjarrigan/flot-rails.git"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

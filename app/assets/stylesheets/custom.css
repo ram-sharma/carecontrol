@@ -294,3 +294,6 @@ table.dataTable thead .sorting:after {
 .form-stack {
   margin-bottom: 10px;
 }
+.legend .legendLabel {
+  padding-left: 5px;
+}
