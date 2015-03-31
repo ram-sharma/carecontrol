@@ -1,7 +1,8 @@
 $(function() {
 
     $('#side-menu').metisMenu();
-
+    var d = new Date();
+    $("#quickaddLabel")[0].innerHTML = "Quick Add  - " + d.toUTCString();
 });
 
 //Loads the correct sidebar on window load,

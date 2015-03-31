@@ -1,0 +1,61 @@
+<div class="modal fade" id="quickadd" tabindex="-1" role="dialog" aria-labelledby="quickaddLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="quickaddLabel"></h3>
+            </div>
+            <div class="modal-body">
+              <p class="lead">Add new patient data quickly and easily through this interface.</p>
+                <form role="form">
+                  <div class="form-group">
+                      <label>Patient</label>
+                      <select class="form-control">
+                          <option>John Doe</option>
+                          <option>Robert Smith</option>
+                          <option>Alfred Brown</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Vitals</label>
+                      <input class="form-control form-stack" placeholder="Average BPM">
+                      <input class="form-control form-stack" placeholder="Blood Pressure">
+                      <input class="form-control form-stack" placeholder="Cholesterol">
+                  </div>
+                  <div class="form-group">
+                      <label>Description</label>
+                      <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label>Patient Status</label>
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>High Risk
+                          </label>
+                      </div>
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Medium Risk
+                          </label>
+                      </div>
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Low Risk
+                          </label>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label>Attachment (Picture, Video, Audio)</label>
+                      <input type="file">
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
