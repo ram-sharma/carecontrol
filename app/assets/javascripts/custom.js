@@ -1,5 +1,4 @@
 $(function() {
-
     $('#side-menu').metisMenu();
     var d = new Date();
     $("#quickaddLabel")[0].innerHTML = "Quick Add  - " + d.toUTCString();
