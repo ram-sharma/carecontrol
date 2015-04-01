@@ -8,6 +8,9 @@ class DashboardController < ApplicationController
   def interactions
   end
 
+  def patients
+  end
+
   private
 
   def verify_credentials
