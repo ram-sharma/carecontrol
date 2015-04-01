@@ -52,7 +52,7 @@ $(function() {
         element: 'morris-team-management',
         data: [{
             label: "Overloaded",
-            value: 5
+            value: 8
         }, {
             label: "Fully Loaded",
             value: 4
