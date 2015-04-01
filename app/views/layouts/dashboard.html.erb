@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Created for Wellframe Design Challenge">
+  <meta name="author" content="Ram Sharma">
+  <title>Care Control Center</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render "shared/quick_add" %>
+<%= render "shared/triage" %>
+<div id="wrapper">
+    <%= render "shared/navigation" %>
+    <div id="page-wrapper">
+      <%= render "shared/alert_panels" %>
+      <div class="row">
+          <div class="col-lg-8">
+            <%= yield %>
+          </div>
+          <div class="col-lg-4">
+            <%= render "dashboard/right_sub_page" %>
+          </div>
+      </div>
+    </div>
+</div>
+<%= javascript_include_tag "application" %>
+</body>
+</html>
