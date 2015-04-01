@@ -1,0 +1,73 @@
+<%= render "shared/alert_panels" %>
+<div class="row">
+    <div class="col-lg-8">
+      <div class="panel panel-primary">
+          <div class="panel-heading">
+              <i class="fa fa-clock-o fa-fw"></i> Latest Patient Interactions
+          </div>
+          <!-- /.panel-heading -->
+          <div class="panel-body">
+              <ul class="timeline">
+                  <li>
+                      <div class="timeline-badge"><i class="fa fa-check"></i>
+                      </div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4 class="timeline-title">Re: Accident - John Smith</h4>
+                              <p><small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago -- Nurse: Jane Wood</small>
+                              </p>
+                          </div>
+                          <div class="timeline-body">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="timeline-inverted">
+                      <div class="timeline-badge warning"><i class="fa fa-money"></i>
+                      </div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4 class="timeline-title">Missed Payment - Lacey Stuart</h4>
+                              <p><small class="text-muted"><i class="fa fa-clock-o"></i> 19 hours ago -- Nurse: Janet Perry</small></p>
+                          </div>
+                          <div class="timeline-body">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam.</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="timeline-badge danger"><i class="fa fa-ambulance"></i>
+                      </div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4 class="timeline-title">Intervention #993-h</h4>
+                              <p><small class="text-muted"><i class="fa fa-clock-o"></i> 19 hours ago -- Nurse: Tyler Bridge</small></p>
+                          </div>
+                          <div class="timeline-body">
+                              <p>Repellendus numquam facilis enim eaque aliquam, voluptatem totam quaerat, magni commodi quisquam.</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="timeline-inverted">
+                      <div class="timeline-badge info"><i class="fa fa-database"></i>
+                      </div>
+                      <div class="timeline-panel">
+                          <div class="timeline-heading">
+                              <h4 class="timeline-title">New Patient Data</h4>
+                          </div>
+                          <div class="timeline-body">
+                              <p>403 New Medical Records</p>
+                              <p>19 New Medical Cases Opened</p>
+                              <p>8 New Doctors Found</p>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        <!-- /.panel-body -->
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <%= render "dashboard/right_sub_page" %>
+    </div>
+</div>

@@ -51,6 +51,7 @@ Carecontrol::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => 'main#index'
   match '/dashboard/' => 'dashboard#index', :as => :dashboard
+  match 'dashboard/interactions/' => 'dashboard#interactions', :as => :interactions
   post 'login', to: 'main#login'
   # See how all your routes lay out with "rake routes"
 

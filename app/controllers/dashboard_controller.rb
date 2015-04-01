@@ -5,6 +5,9 @@ class DashboardController < ApplicationController
   def index
   end
 
+  def interactions
+  end
+
   private
 
   def verify_credentials

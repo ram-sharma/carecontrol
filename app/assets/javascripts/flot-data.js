@@ -51,49 +51,49 @@
 
 //Flot Pie Chart
 $(function() {
+    if($("#flot-patient-pop").length!=0){
+      var data = [{
+          label: "Immediate Intervention",
+          data: 4,
+          color: "#d9534f"
+      }, {
+          label: "High Risk",
+          data: 12,
+          color: "#f0ad4e"
+      }, {
+          label: "Improving",
+          data: 26,
+          color: "#5cb85c"
+      }, {
+          label: "Declining",
+          data: 16,
+          color: "#337ab7"
+      }, {
+          label: "Stable",
+          data: 20,
+          color: "#E0E0E0"
+      }];
 
-    var data = [{
-        label: "Immediate Intervention",
-        data: 4,
-        color: "#d9534f"
-    }, {
-        label: "High Risk",
-        data: 12,
-        color: "#f0ad4e"
-    }, {
-        label: "Improving",
-        data: 26,
-        color: "#5cb85c"
-    }, {
-        label: "Declining",
-        data: 16,
-        color: "#337ab7"
-    }, {
-        label: "Stable",
-        data: 20,
-        color: "#E0E0E0"
-    }];
-
-    var plotObj = $.plot($("#flot-patient-pop"), data, {
-        series: {
-            pie: {
-                show: true
-            }
-        },
-        grid: {
-            hoverable: true
-        },
-        tooltip: true,
-        tooltipOpts: {
-            content: "%p.0%, %s", // show percentages, rounding to 2 decimal places
-            shifts: {
-                x: 20,
-                y: 0
-            },
-            defaultTheme: true
-        }
-    });
-
+      var plotObj = $.plot($("#flot-patient-pop"), data, {
+          series: {
+              pie: {
+                  show: true
+              }
+          },
+          grid: {
+              hoverable: true
+          },
+          tooltip: true,
+          tooltipOpts: {
+              content: "%p.0%, %s", // show percentages, rounding to 2 decimal places
+              shifts: {
+                  x: 20,
+                  y: 0
+              },
+              defaultTheme: true
+          }
+      });
+    }
 });
 
 // //Flot Moving Line Chart
