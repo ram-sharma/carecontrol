@@ -16,15 +16,7 @@
 <div id="wrapper">
     <%= render "shared/navigation" %>
     <div id="page-wrapper">
-      <%= render "shared/alert_panels" %>
-      <div class="row">
-          <div class="col-lg-8">
-            <%= yield %>
-          </div>
-          <div class="col-lg-4">
-            <%= render "dashboard/right_sub_page" %>
-          </div>
-      </div>
+      <%= yield %>
     </div>
 </div>
 <%= javascript_include_tag "application" %>
