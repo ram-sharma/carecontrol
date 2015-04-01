@@ -25,8 +25,8 @@ $(function() {
             stable: 199
         }, {
             period: 'June 2014',
-            intevention: 21,
-            highrisk: 16,
+            intevention: 78,
+            highrisk: 25,
             improve: 155,
             dec: 32,
             stable: 97
