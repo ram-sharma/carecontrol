@@ -1,0 +1,45 @@
+<div class="modal fade" id="triage" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="modalLabel">Assign New Task (Triage)</h3>
+            </div>
+            <div class="modal-body">
+              <p class="lead">Assign a new task quickly and easily through this interface.</p>
+                <form role="form">
+                  <div class="form-group">
+                      <label>Nurse</label>
+                      <select class="form-control">
+                          <option>Ram Sharma</option>
+                          <option>Tyler Bridge</option>
+                          <option>Janet Colburg</option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Patient</label>
+                    <select class="form-control">
+                        <option>John Doe</option>
+                        <option>Robert Smith</option>
+                        <option>Alfred Brown</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <label>Description</label>
+                      <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label>Attachment (Picture, Video, Audio)</label>
+                      <input type="file">
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
