@@ -20,4 +20,43 @@ $(function() {
         resize: true
     });
   }
+  if($("#morris-patient-engagement").length!=0){
+    Morris.Bar({
+          element: 'morris-patient-engagement',
+          data: [{
+              y: 'March 2014',
+              a: 100,
+              b: 90
+          }, {
+              y: 'April 2014',
+              a: 75,
+              b: 65
+          }, {
+              y: 'May 2014',
+              a: 50,
+              b: 40
+          }, {
+              y: 'June 2014',
+              a: 75,
+              b: 65
+          }, {
+              y: 'July 2014',
+              a: 50,
+              b: 40
+          }, {
+              y: 'August 2014',
+              a: 75,
+              b: 65
+          }, {
+              y: 'September 2014',
+              a: 100,
+              b: 90
+          }],
+          xkey: 'y',
+          ykeys: ['a', 'b'],
+          labels: ['Engaged', 'Disengaged'],
+          hideHover: 'auto',
+          resize: true
+      });
+  }
 });
