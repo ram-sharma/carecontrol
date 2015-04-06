@@ -9,7 +9,8 @@
               <p class="lead">Assign a new task quickly and easily through this interface.</p>
                 <form role="form">
                   <div class="form-group">
-                      <input class="form-control" placeholder="Enter Name of Task">
+                    <label>Issue</label>
+                    <input class="form-control" placeholder="Use 'Re: ' for Follow-Up">
                   </div>
                   <div class="form-group">
                       <label>Care Manager</label>
@@ -22,9 +23,7 @@
                   <div class="form-group">
                     <label>Patient</label>
                     <select class="form-control">
-                        <option>John Doe</option>
-                        <option>Robert Smith</option>
-                        <option>Alfred Brown</option>
+                      <%= render "shared/patient_options_list" %>
                     </select>
                   </div>
                   <div class="form-group">

@@ -317,3 +317,6 @@ table.dataTable thead .sorting:after {
 .emergency {
   color: #d9534f
 }
+.radio-tight {
+  margin-top: 0;
+}
