@@ -34,3 +34,18 @@ $(function() {
         element.addClass('active');
     }
 });
+$(document).ready(function() {
+    if($('#dataTables-patients').length != 0) {
+      $('#dataTables-patients').DataTable({
+              responsive: true,
+              "iDisplayLength": 20,
+              "language": {
+              "lengthMenu": "Display _MENU_ patients"
+              },
+              "order": [[ 3, "desc" ]],
+              columnDefs: [
+                 { orderable: false, targets: -1 }
+              ]
+      });
+    }
+});
