@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-file-image-o fa-fw"></i> Patient Visual Assets
+        <div class="pull-right">
+          <i class="fa fa-lock fa-fw"></i> Admin Only
+        </div>
+    </div>
+    <!-- /.panel-heading -->
+    <div class="panel-body">
+      <div class="col-lg-6">
+        <h4>Medical Visuals (2)</h4>
+        <%= link_to image_tag("patient-medical-visual.png", :class => "img-thumbnail"), image_path("patient-medical-visual-lg.png"),  :'data-lightbox' => 'patient-visual-1' %>
+        <%= link_to image_tag("heart-img.jpg", :class => "img-thumbnail"), image_path("heart-img-lg.jpg"),  :'data-lightbox' => 'patient-visual-2' %>
+      </div>
+      <div class="col-lg-6">
+        <h4>Report Copy Archives (1)</h4>
+        <%= link_to image_tag("medical-report.jpg", :class => "img-thumbnail"), image_path("medical-report-lg.jpg"),  :'data-lightbox' => 'patient-record-1' %>
+      </div>
+    </div>
+    <!-- /.panel-body -->
+</div>

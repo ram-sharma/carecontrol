@@ -320,3 +320,6 @@ table.dataTable thead .sorting:after {
 .radio-tight {
   margin-top: 0;
 }
+.img-thumbnail {
+  margin-bottom: 10px;
+}
