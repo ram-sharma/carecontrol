@@ -59,4 +59,80 @@ $(function() {
           resize: true
       });
   }
+  if($("#morris-single-patient-engagement").length!=0){
+    Morris.Bar({
+          element: 'morris-single-patient-engagement',
+          data: [{
+              y: 'March 2014',
+              a: 2
+          }, {
+              y: 'April 2014',
+              a: 3
+          }, {
+              y: 'May 2014',
+              a: 5
+          }, {
+              y: 'June 2014',
+              a: 4
+          }, {
+              y: 'July 2014',
+              a: 5
+          }, {
+              y: 'August 2014',
+              a: 7
+          }, {
+              y: 'September 2014',
+              a: 3
+          }],
+          xkey: 'y',
+          ykeys: ['a'],
+          labels: ['Engagement'],
+          hideHover: 'auto',
+          resize: true
+      });
+  }
+  if($("#morris-single-patient-data-vitals").length!=0){
+    Morris.Line({
+          element: 'morris-single-patient-data-vitals',
+          data: [{
+              y: '2012-03-15',
+              a: 200,
+              b: 50
+          }, {
+              y: '2012-03-17',
+              a: 284,
+              b: 45
+          }, {
+              y: '2012-03-18',
+              a: 239,
+              b: 55
+          }, {
+              y: '2012-03-20',
+              a: 300,
+              b: 60
+          }, {
+              y: '2012-03-21',
+              a: 238,
+              b: 53
+          }, {
+              y: '2012-03-25',
+              a: 259,
+              b: 59
+          }, {
+              y: '2012-03-30',
+              a: 300,
+              b: 68
+          }],
+          lineColors: [
+            '#f0ad4e',
+            '#5cb85c',
+            '#d9534f'
+          ],
+          xkey: 'y',
+          ykeys: ['a', 'b'],
+          labels: ['Active Index', 'Risk Score'],
+          hideHover: 'auto',
+          resize: true
+      });
+  }
 });
