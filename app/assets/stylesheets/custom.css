@@ -54,6 +54,9 @@ body {
 .navbar-top-links .dropdown-menu li a div {
   white-space: normal;
 }
+.dropdown-messages .danger {
+  background: #f2dede;
+}
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
 .navbar-top-links .dropdown-alerts {
@@ -300,4 +303,14 @@ table.dataTable thead .sorting:after {
 }
 .legend .legendLabel {
   padding-left: 5px;
+}
+
+.online {
+  color: #5cb85c;
+}
+.busy {
+  color: #f0ad4e;
+}
+.emergency {
+  color: #d9534f
 }
