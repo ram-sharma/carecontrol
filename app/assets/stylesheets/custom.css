@@ -84,10 +84,10 @@ body {
   padding: 15px;
 }
 .sidebar ul li {
-  border-bottom: none;
+  border-bottom: 1px solid #e7e7e7;
 }
 .sidebar ul li a.active {
-  background-color: #fafafa;
+  color: #444
 }
 .sidebar ul li a:hover {
   background-color: #fafafa;
