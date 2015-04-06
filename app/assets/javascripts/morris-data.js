@@ -109,46 +109,54 @@ $(function() {
               y: '2012-03-15',
               a: 200,
               b: 50,
-              c: 150
+              c: 150,
+              d: 84
           }, {
               y: '2012-03-17',
               a: 284,
               b: 45,
-              c: 140
+              c: 140,
+              d: 78
           }, {
               y: '2012-03-18',
               a: 239,
               b: 55,
-              c: 155
+              c: 155,
+              d: 83
           }, {
               y: '2012-03-20',
               a: 300,
               b: 60,
-              c: 150
+              c: 150,
+              d: 92
           }, {
               y: '2012-03-21',
               a: 238,
               b: 53,
-              c: 140
+              c: 140,
+              d: 90
           }, {
               y: '2012-03-25',
               a: 259,
               b: 59,
-              c: 130
+              c: 130,
+              d: 96
           }, {
               y: '2012-03-30',
               a: 300,
               b: 68,
-              c: 125
+              c: 125,
+              d: 98
           }],
           lineColors: [
             '#f0ad4e',
             '#5cb85c',
-            '#d9534f'
+            '#d9534f',
+            '#337ab7'
           ],
           xkey: 'y',
-          ykeys: ['a', 'b', 'c'],
-          labels: ['Active Index', 'Risk Score', 'Health Vitals'],
+          ykeys: ['a', 'b', 'c', 'd'],
+          labels: ['Active Index', 'Risk Score', 'Health Score', 'Engagement Score'],
           hideHover: 'auto',
           resize: true
       });
