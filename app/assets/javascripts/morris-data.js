@@ -64,29 +64,40 @@ $(function() {
           element: 'morris-single-patient-engagement',
           data: [{
               y: 'March 2014',
-              a: 2
+              a: 2,
+              b: 0
           }, {
               y: 'April 2014',
-              a: 3
+              a: 3,
+              b: 0
           }, {
               y: 'May 2014',
-              a: 5
+              a: 5,
+              b: 0
           }, {
               y: 'June 2014',
-              a: 4
+              a: 4,
+              b: 0
           }, {
               y: 'July 2014',
-              a: 5
+              a: 5,
+              b: 0
           }, {
               y: 'August 2014',
-              a: 7
+              a: 7,
+              b: 1
           }, {
               y: 'September 2014',
-              a: 3
+              a: 3,
+              b: 0
           }],
           xkey: 'y',
-          ykeys: ['a'],
-          labels: ['Engagement'],
+          ykeys: ['a', 'b'],
+          barColors: [
+            '#337ab7',
+            '#d9534f'
+          ],
+          labels: ['Engagement', 'Interventions'],
           hideHover: 'auto',
           resize: true
       });
