@@ -5,7 +5,7 @@ class MainController < ApplicationController
 
   def login
     if(params[:email] == "nurse@example.com" && params[:password] == "wellframe")
-      redirect_to(dashboard_url(:key => 'GLC6vQrubTiacu'))
+      redirect_to(dashboard_url(:key => 'GLC6vQrubTiacu', :login => 'true'))
     else
       redirect_to root_path
     end
