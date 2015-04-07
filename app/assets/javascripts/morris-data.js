@@ -97,7 +97,7 @@ $(function() {
             '#337ab7',
             '#d9534f'
           ],
-          labels: ['Engagement', 'Interventions'],
+          labels: ['Engagements', 'Interventions'],
           hideHover: 'auto',
           resize: true
       });

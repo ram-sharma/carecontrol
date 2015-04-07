@@ -17,6 +17,9 @@ class DashboardController < ApplicationController
   def behindthecode
   end
 
+  def casestudy
+  end
+
   private
 
   def verify_credentials

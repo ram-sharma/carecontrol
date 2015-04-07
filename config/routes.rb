@@ -55,6 +55,7 @@ Carecontrol::Application.routes.draw do
   match 'dashboard/patients/' => 'dashboard#patients', :as => :patients
   match 'dashboard/patient_profile/' => 'dashboard#patientprofile', :as => :patientprofile
   match 'dashboard/behind_the_code/' => 'dashboard#behindthecode', :as => :behindthecode
+  match 'dashboard/case_study/' => 'dashboard#casestudy', :as => :casestudy
   post 'login', to: 'main#login'
   # See how all your routes lay out with "rake routes"
 

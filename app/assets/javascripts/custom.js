@@ -51,6 +51,6 @@ $(document).ready(function() {
     if($('ul[class=timeline]').length != 0){
       var newEvent = $('#newEvent');
       newEvent.hide();
-      setTimeout(function(){ $(newEvent).prependTo("ul[class=timeline]").fadeIn("slow"); }, 5000);
+      setTimeout(function(){ $(newEvent).prependTo("ul[class=timeline]").fadeIn("slow"); }, 3000);
     }
 });
