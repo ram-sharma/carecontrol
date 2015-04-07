@@ -326,3 +326,6 @@ table.dataTable thead .sorting:after {
 .img-thumbnail {
   margin-bottom: 10px;
 }
+.mr-right {
+  margin-right: 10px;
+}
