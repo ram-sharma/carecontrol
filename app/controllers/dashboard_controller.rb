@@ -14,6 +14,9 @@ class DashboardController < ApplicationController
   def patientprofile
   end
 
+  def behindthecode
+  end
+
   private
 
   def verify_credentials

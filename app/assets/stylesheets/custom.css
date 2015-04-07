@@ -14,6 +14,9 @@ body {
 .page-header {
   margin: 0px 0 20px;
 }
+.page-header-alt {
+  margin: 0px 0 10px;
+}
 #morris-patient-engagement {
   height: 250px;
 }
