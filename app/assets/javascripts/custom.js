@@ -17,9 +17,7 @@ $(document).ready(function() {
         var d = new Date();
         $("#quickaddLabel")[0].innerHTML = "Quick Add  - " + d.toUTCString();
     });
-    $(function() {
-        console.log('test');
-    });
+
     //Loads the correct sidebar on window load,
     //collapses the sidebar on window resize.
     // Sets the min-height of #page-wrapper to window size
@@ -50,4 +48,9 @@ $(document).ready(function() {
             element.addClass('active');
         }
     });
+    if($('ul[class=timeline]').length != 0){
+      var newEvent = $('#newEvent');
+      newEvent.hide();
+      setTimeout(function(){ $(newEvent).prependTo("ul[class=timeline]").fadeIn("slow"); }, 5000);
+    }
 });
