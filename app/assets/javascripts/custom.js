@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $("#introjs-help").on("click", function() {
+      introJs().setOption("showStepNumbers","false").start();
+    });
+
     if($('#dataTables-patients').length != 0) {
       $('#dataTables-patients').DataTable({
               responsive: true,
