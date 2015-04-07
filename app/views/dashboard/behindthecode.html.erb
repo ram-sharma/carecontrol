@@ -2,6 +2,63 @@
   <h1 class="page-header page-header-alt">Behind The Code <small> (Decisions and Design)</small></h1>
   <div class="row">
     <div class="col-lg-6">
+        <h3>Response to Questions</h3>
+        <ol>
+          <li><i>How well does your product scale - can a single nurse effectively handle 10, 100, 1000 patients?</i>
+          <p class="mr-top">
+            The product is able to scale for a variety of reasons:
+            <ul>
+              <li>Each segment of the site is modular, giving full control to the controller to process data accordingly - after optimizations are made, of course.</li>
+              <li>The product is designed with 1000+ patients in mind, so the nurses will see only as much information they are able to act on in a day, but also providing an option of viewing large sets of patient data through the "Patient Population" page, "All Patients" tabular view.</li>
+              <li>With a team settings page, team admins should be able to set the groups of patients responsible, thus limiting the number of patients a single nurse can access through the system. The backend would need to be optimized for this to perform well.</li>
+            </ul>
+          </p>
+          </li>
+          <li><i>What signals could you collect to prioritize which patients the nurses should spend more time on?</i>
+            <p class="mr-top">
+            The main signals to collect would be risk and engagement scores, these tell the nurse if there something that requires immediate intervention or if a patient needs a response to an engagement. The risk score can be determined by recent medical reports, physical activity data (collected through wearables and manual input), and based on health vitals.
+          </p>
+          <p>
+            By ensuring all patient engagements are handled in a timely fashion, patients receive increased satisfaction and problems are avoided in the long-run</p>
+          </p>
+          </li>
+          <li><i>What metrics would you collect about the user and the system to see how well your product UI/UX/Design is performing?</i>
+            <ul class="mr-top">
+              <li>Feature usage, event tracking, and product navigation history to determine ideal workflows</li>
+              <li>System response time by event type to determine areas of focus for optimization or dev-ops</li>
+              <li>Number of actions a care manager performs to determine development of features</li>
+              <li>Quality of input data to help determine how to optimize data management</li>
+            </ul>
+          </li>
+          <li class="mr-top"><i>Where do you see technical bottlenecks arising when you get to the order of 1000+ patients on the system? Both on the front-end and back-end?</i>
+            <p class="mr-top">
+              Currently there is no database system in place due to simplicity and environmental constraints (Heroku). If there was one, it would ideally be something like MongoDB to take advantage of schemaless operational speed.
+            </p>
+            <p>
+              The other bottlenecks would most likely be related to retrieving patient stats and engagement data, that could be offset implementing background jobs for organizing patient-specific data into separate data structures for easy retrieval
+            </p>
+          </li>
+          <li><i>What do you wish you could implement that you didn't get a chance to (since this is a limited coding challenge)?</i>
+            <p class="mr-top">
+              I would have liked to implement many features, including:
+              <ul>
+                <li>Enforcing privacy policy on system data, maybe with something like <a href="https://github.com/jeanqasaur/jeeves/tree/master/test/gallery/healthweb" target="_blank">Jeeves</a></li>
+                <li>Implementing a database - again maybe MongoDB</li>
+                <li>Implementing robust user management - thinking Devise for Rails</li>
+                <li>Optimizing asset pipeline and management of js, css, and image files</li>
+                <li>Implementing working: chat, task management, notification, account management</li>
+                <li>Adding features for reporting and system-level stats collection</li>
+              </ul>
+            </p>
+          </li>
+          <li><i>How would you onboard a new user who has never used your product before? What parts of the workflow do you think would be most complicated to explain?</i>
+            <p class="mr-top">
+              Onboarding would ideally be done using Intro.js as it proves to be robust tutorial creation tool along with being visually appealing. The most complication part of the workflow would be navigating to view specific patient details, as it requires going through either "All Patients" or "High Risk Patient Alert Panel", the navigation could be re-examined with more time.
+            </p>
+          </li>
+        </ol>
+    </div>
+    <div class="col-lg-6">
         <h3>Approach</h3>
         <p>
           This case study was approached just like I would with any professional project.
@@ -19,8 +76,19 @@
         <h3>Early Mock-ups <small>Click to Expand</small></h3>
         <%= link_to image_tag("mockup-thumb.jpg", :class => "img-thumbnail mr-right"), image_path("mockup-lg.jpg"),  :'data-lightbox' => 'mockup1' %>
         <%= link_to image_tag("dash-info-thumb.jpg", :class => "img-thumbnail"), image_path("dash-info-lg.jpg"),  :'data-lightbox' => 'mockup2' %>
-    </div>
-    <div class="col-lg-6">
+        <h3>Features</h3>
+        <ul>
+          <li>Quick Actions for: Adding New Patient Data and Triage within a Team</li>
+          <li>Navigation: messaging dropdowns (for notifications, private messages, tasks)</li>
+          <li>Unique tutorial (via help button) for each page</li>
+          <li>Panel for showing patients that need immediate attend</li>
+          <li>Chat for patients and Care Managers</li>
+          <li>Team management actions for admins</li>
+          <li>Ability to easily view all patients - with working search!</li>
+          <li>Population views in multiple graph types across various time scales</li>
+          <li>Patient details, data, and asset views - along with data graphs allowing for high-level insights based on continuous metrics collections</li>
+          <li>Patient interaction timeline, updated in real-time</li>
+        </ul>
         <h3>Technology Used</h3>
         <p>In order to speed up develop, I used a Bootstrap template that I thought would be a good starting point for quickly developing a dashboard for this purpose: <a href="http://startbootstrap.com/template-overviews/sb-admin-2/" target="_blank">SB Admin 2</a>.</p>
         <ul>

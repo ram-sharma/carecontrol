@@ -329,3 +329,6 @@ table.dataTable thead .sorting:after {
 .mr-right {
   margin-right: 10px;
 }
+.mr-top {
+  margin-top: 10px;
+}
