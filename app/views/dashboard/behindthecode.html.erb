@@ -6,17 +6,19 @@
         <ol>
           <li><i>How well does your product scale - can a single nurse effectively handle 10, 100, 1000 patients?</i>
           <p class="mr-top">
-            The product is able to scale for a variety of reasons:
+            The dashboard provides two simple answers, no matter how many patients you are handling: a list of patients that need immediate attention and your current state of your assigned patient population.
+            <p>The product is also able to scale for a variety of other reasons:</p>
             <ul>
-              <li>Each segment of the site is modular, giving full control to the controller to process data accordingly - after optimizations are made, of course.</li>
-              <li>The product is designed with 1000+ patients in mind, so the nurses will see only as much information they are able to act on in a day, but also providing an option of viewing large sets of patient data through the "Patient Population" page, "All Patients" tabular view.</li>
-              <li>With a team settings page, team admins should be able to set the groups of patients responsible, thus limiting the number of patients a single nurse can access through the system. The backend would need to be optimized for this to perform well.</li>
+              <li>Each segment of the site is modular with it's own controller methods. A production version of this dashboard will be built with asynchronous updates to the DOM in mind.</li>
+              <li>The product is designed with 1000+ patients in mind. Nurses will see only as much information they are able to act on in a day, but the system also provides an option of viewing large sets of patient data through the "Patient Population" page, "All Patients" tabular view.</li>
+              <li>With a team settings page, team admins should be able to set the groups of patients for each nurse, thus limiting the number of patients a single nurse can access through the system. Thus, the system can process and display data that is relevant only to the user.</li>
             </ul>
           </p>
           </li>
           <li><i>What signals could you collect to prioritize which patients the nurses should spend more time on?</i>
             <p class="mr-top">
-            The main signals to collect would be risk and engagement scores, these tell the nurse if there something that requires immediate intervention or if a patient needs a response to an engagement. The risk score can be determined by recent medical reports, physical activity data (collected through wearables and manual input), and based on health vitals.
+            The main signals to collect would be risk and engagement scores, these tell the nurse if there something that requires immediate intervention or if a patient needs a response to an engagement.</p>
+            <p>The risk score can be determined by recent medical reports, physical activity data (collected through wearables and manual input), and based on health vitals.
           </p>
           <p>
             By ensuring all patient engagements are handled in a timely fashion, patients receive increased satisfaction and problems are avoided in the long-run</p>
@@ -24,15 +26,14 @@
           </li>
           <li><i>What metrics would you collect about the user and the system to see how well your product UI/UX/Design is performing?</i>
             <ul class="mr-top">
-              <li>Feature usage, event tracking, and product navigation history to determine ideal workflows</li>
-              <li>System response time by event type to determine areas of focus for optimization or dev-ops</li>
-              <li>Number of actions a care manager performs to determine development of features</li>
-              <li>Quality of input data to help determine how to optimize data management</li>
+              <li>Feature specific metrics, user event tracking, and user navigation history will help determine ideal user workflows</li>
+              <li>System response time by event type (i.e. saving new patient data) will determine areas of focus for optimization of server requests</li>
+              <li>Quality of input data can be measured by subsequent edits and input errors, that will help determine how to optimize data management.</li>
             </ul>
           </li>
           <li class="mr-top"><i>Where do you see technical bottlenecks arising when you get to the order of 1000+ patients on the system? Both on the front-end and back-end?</i>
             <p class="mr-top">
-              Currently there is no database system in place due to simplicity and environmental constraints (Heroku).
+              Currently there is no database system in place due to simplicity and environmental constraints (Heroku). A production system must need a database, and a lot of the bottlenecks can become a data modelling issue.
             </p>
             <p>
               The other bottlenecks would most likely be related to retrieving patient stats and engagement data, that could be offset implementing background jobs for organizing patient-specific data into separate data structures for easy retrieval
@@ -42,18 +43,19 @@
             <p class="mr-top">
               I would have liked to implement many features, including:
               <ul>
-                <li>Enforcing privacy policy on system data, maybe with something like <a href="https://github.com/jeanqasaur/jeeves/tree/master/test/gallery/healthweb" target="_blank">Jeeves</a></li>
                 <li>Implementing a database</li>
-                <li>Implementing robust user management - thinking Devise for Rails</li>
-                <li>Optimizing asset pipeline and management of js, css, and image files</li>
-                <li>Implementing working: chat, task management, notification, account management</li>
+                <li>Asynchronous updated to front-end components using ajax (either in jQuery or another framework)</li>
+                <li>Enforcing privacy policy on system data, maybe with something like <a href="https://github.com/jeanqasaur/jeeves/tree/master/test/gallery/healthweb" target="_blank">Jeeves</a></li>
+                <li>Implementing robust user account management - thinking Devise for Rails</li>
+                <li>Optimizing asset pipeline and management of js, css, and image files. Assets should be only requested when needed.</li>
+                <li>Implementing working: chat, task management, notifications, and account management for admins</li>
                 <li>Adding features for reporting and system-level stats collection</li>
               </ul>
             </p>
           </li>
           <li><i>How would you onboard a new user who has never used your product before? What parts of the workflow do you think would be most complicated to explain?</i>
             <p class="mr-top">
-              Onboarding would ideally be done using Intro.js as it proves to be robust tutorial creation tool along with being visually appealing. The most complication part of the workflow would be navigating to view specific patient details, as it requires going through either "All Patients" or "High Risk Patient Alert Panel", the navigation could be re-examined with more time.
+              Onboarding would ideally be done using Intro.js as it proves to be robust tutorial creation tool along with being visually appealing. The most complicated part of the workflow would be navigating to specific patient details, as it requires going through either "All Patients" or "High Risk Patient Alert Panel". Site navigation should definitely be re-examined with more time.
             </p>
           </li>
         </ol>
