@@ -32,7 +32,7 @@
           </li>
           <li class="mr-top"><i>Where do you see technical bottlenecks arising when you get to the order of 1000+ patients on the system? Both on the front-end and back-end?</i>
             <p class="mr-top">
-              Currently there is no database system in place due to simplicity and environmental constraints (Heroku). If there was one, it would ideally be something like MongoDB to take advantage of schemaless operational speed.
+              Currently there is no database system in place due to simplicity and environmental constraints (Heroku).
             </p>
             <p>
               The other bottlenecks would most likely be related to retrieving patient stats and engagement data, that could be offset implementing background jobs for organizing patient-specific data into separate data structures for easy retrieval
@@ -43,7 +43,7 @@
               I would have liked to implement many features, including:
               <ul>
                 <li>Enforcing privacy policy on system data, maybe with something like <a href="https://github.com/jeanqasaur/jeeves/tree/master/test/gallery/healthweb" target="_blank">Jeeves</a></li>
-                <li>Implementing a database - again maybe MongoDB</li>
+                <li>Implementing a database</li>
                 <li>Implementing robust user management - thinking Devise for Rails</li>
                 <li>Optimizing asset pipeline and management of js, css, and image files</li>
                 <li>Implementing working: chat, task management, notification, account management</li>
