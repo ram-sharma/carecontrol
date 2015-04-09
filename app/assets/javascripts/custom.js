@@ -1,3 +1,4 @@
+//helper function for getting url params
 function getUrlParameter(sParam)
 {
     var sPageURL = window.location.search.substring(1);
@@ -11,31 +12,48 @@ function getUrlParameter(sParam)
         }
     }
 }
-$(document).ready(function() {
-    if(getUrlParameter('login') == 'true') {
-      introJs().setOption("showStepNumbers","false").start();
-    }
-    $("#introjs-help").on("click", function() {
-      introJs().setOption("showStepNumbers","false").start();
-    });
 
-    if($('#dataTables-patients').length != 0) {
-      $('#dataTables-patients').DataTable({
-              responsive: true,
-              "iDisplayLength": 20,
-              "language": {
-              "lengthMenu": "Display _MENU_ patients"
-              },
-              "order": [[ 3, "desc" ]],
-              columnDefs: [
-                 { orderable: false, targets: -1 }
-              ]
-      });
-    }
+$(document).ready(function() {
+
     $(function() {
-        $('#side-menu').metisMenu();
-        var d = new Date();
-        $("#quickaddLabel")[0].innerHTML = "Quick Add  - " + d.toUTCString();
+      //sidebar menu activate
+      $('#side-menu').metisMenu();
+
+      //set date in quick add modal
+      var d = new Date();
+      $("#quickaddLabel")[0].innerHTML = "Quick Add  - " + d.toUTCString();
+
+      if($('ul[class=timeline]').length != 0){
+        var newEvent = $('#newEvent');
+        newEvent.hide();
+        setTimeout(function(){ $(newEvent).prependTo("ul[class=timeline]").fadeIn("slow"); }, 3000);
+      }
+
+      //check if user is logging in for first time to intiate intro.js tut
+      if(getUrlParameter('login') == 'true') {
+        introJs().setOption("showStepNumbers","false").start();
+      }
+
+      //on click event for introjs tut
+      $("#introjs-help").on("click", function() {
+        introJs().setOption("showStepNumbers","false").start();
+      });
+
+      //activate dataTables
+      if($('#dataTables-patients').length != 0) {
+        $('#dataTables-patients').DataTable({
+            responsive: true,
+            "iDisplayLength": 20,
+            "language": {
+            "lengthMenu": "Display _MENU_ patients"
+            },
+            "order": [[ 3, "desc" ]],
+            columnDefs: [
+               { orderable: false, targets: -1 }
+            ]
+        });
+      }
+
     });
 
     //Loads the correct sidebar on window load,
@@ -68,9 +86,5 @@ $(document).ready(function() {
             element.addClass('active');
         }
     });
-    if($('ul[class=timeline]').length != 0){
-      var newEvent = $('#newEvent');
-      newEvent.hide();
-      setTimeout(function(){ $(newEvent).prependTo("ul[class=timeline]").fadeIn("slow"); }, 3000);
-    }
+
 });
