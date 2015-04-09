@@ -12,7 +12,7 @@ end
 module Carecontrol
   REQUEST_KEY = "tgsq45f948"
   USERNAME = "nurse@example.com"
-  PASSWORD = "wellframe"
+  PASSWORD = "password"
 
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
