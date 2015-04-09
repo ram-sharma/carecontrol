@@ -10,7 +10,7 @@ if defined?(Bundler)
 end
 
 module Carecontrol
-  REQUEST_KEY = "GLC6vQrubTiacu"
+  REQUEST_KEY = "tgsq45f948" 
   USERNAME = "nurse@example.com"
   PASSWORD = "password"
 
