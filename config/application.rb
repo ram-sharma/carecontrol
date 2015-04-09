@@ -10,9 +10,9 @@ if defined?(Bundler)
 end
 
 module Carecontrol
-  REQUEST_KEY = "tgsq45f948" 
+  REQUEST_KEY = "tgsq45f948"
   USERNAME = "nurse@example.com"
-  PASSWORD = "password"
+  PASSWORD = "wellframe"
 
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
