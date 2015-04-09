@@ -23,7 +23,7 @@ class DashboardController < ApplicationController
   private
 
   def verify_credentials
-    if(params[:key] == "GLC6vQrubTiacu")
+    if(params[:key] == Carecontrol::REQUEST_KEY)
       return true
     else
       redirect_to root_path

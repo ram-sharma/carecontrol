@@ -10,6 +10,10 @@ if defined?(Bundler)
 end
 
 module Carecontrol
+  REQUEST_KEY = "GLC6vQrubTiacu"
+  USERNAME = "nurse@example.com"
+  PASSWORD = "password"
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
